@@ -188,6 +188,15 @@
   #define AXIS6_NAME 'C' // :['A', 'B', 'C', 'U', 'V', 'W']
 #endif
 
+/**
+ * Se define la variable DIAG_JUMPERS_REMOVED para quitar un warning en
+ * la compilacion. Simplente es un recordatorio de que hay que quitar 
+ * los jumpers de los drivers si no se utilizan como finales de carrera
+ * [SOLO FUNCIONA EN LA RAMA BUGFIX]
+ */
+#define DIAG_JUMPERS_REMOVED
+
+
 // @section extruder
 
 // This defines the number of extruders
@@ -600,9 +609,9 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-    #define DEFAULT_Kp  22.20
-    #define DEFAULT_Ki   1.08
-    #define DEFAULT_Kd 114.00
+    #define DEFAULT_Kp  24.09
+    #define DEFAULT_Ki   1.74
+    #define DEFAULT_Kd  83.29
   #endif
 #endif // PIDTEMP
 
